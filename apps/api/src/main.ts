@@ -1,3 +1,4 @@
+import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
 
@@ -10,6 +11,8 @@ async function bootstrap() {
     methods: "GET,HEAD,PUT,POST,DELETE",
     credentials: true
   });
+
+  app.useGlobalPipes(new ValidationPipe());
 
   app.setGlobalPrefix("api");
 
