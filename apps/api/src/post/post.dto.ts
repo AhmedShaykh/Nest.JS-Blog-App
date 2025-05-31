@@ -1,4 +1,4 @@
-import { IsBoolean, IsDateString, IsMongoId, IsString } from "class-validator";
+import { IsBoolean, IsString } from "class-validator";
 import { PartialType } from "@nestjs/mapped-types";
 
 export class CreatePostDTO {
